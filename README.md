@@ -17,3 +17,16 @@ for i in range(start, end):
         sum_negative += a[i]
 
 print("Сумма отрицательных элементов:", sum_negative)
+
+practice-task-4
+
+n = int(input("Введите количество голов драконьей стаи: "))
+
+dp = [0] * (n + 1)
+dp[0] = 1
+
+for i in range(1, n + 1):
+      for heads in range(1, min(7, i) + 1):
+             dp[i] = max(dp[i], heads * dp[i - heads])
+             
+print("Максимальная сила стаи:", dp[n])

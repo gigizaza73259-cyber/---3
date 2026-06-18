@@ -1,4 +1,5 @@
 practice-task-3
+
 n = int(input("Введите размер массива: "))
 
 a = list(map(int, input("Введите элементы массива через пробел: ").split()))
